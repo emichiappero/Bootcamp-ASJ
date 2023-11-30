@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+
+    <!-- CSS Interno -->
+    <style type="text/css">
+      /* selector { propiedad: valor } */
+    </style>
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+  </head>
+  <body>
+    <div>
+      <button type="button" style="background-color: blue">Boton comun</button>
+    </div>
+
+    <span> hola </span>
+    <a href="google.com" id="hipervinculo" class="bordeVerde">Google</a>
+
+    <section>
+      <!--Form-->
+      <form action="datos.php" method="POST">
+        <div>
+          <input type="number" min="0" max="10" step="2" class="big-text" />
+        </div>
+
+        <!--Input Texto-->
+        <input type="text" placeholder="Nombre" name="nombre" maxlength="10" />
+
+        <!--Input Password-->
+        <input
+          type="password"
+          placeholder="Contraseña"
+          name="pass"
+          class="bordeVerde"
+        />
+        <br />
+        <!-- Checkbox -->
+        <input type="checkbox" name="rol" value="frontend" checked /> Dev
+        Frontend
+        <br />
+        <input type="checkbox" name="rol" value="backend" /> Dev Backend
+        <br />
+        <!--Radiobutton-->
+        <input type="radio" name="pais" value="ARG" /> Argentina
+        <br />
+        <input type="radio" name="pais" value="BR" checked /> Brasil
+        <br />
+        <input type="radio" name="otraCosa" value="true" /> Otro
+        <br />
+        <!--Input File-->
+        <input type="file" />
+
+        <br />
+        <input type="time" />
+
+        <!--Textarea-->
+        <textarea name="opinion" cols="60" rows="7"></textarea>
+
+        <!--Hidden-->
+        <input type="hidden" name="codigo" value="#998-762-005" />
+
+        <!--Select / Dropdown -->
+        <select name="helado" multiple>
+          <option value="fru">Frutilla</option>
+          <option value="limon">Limón</option>
+          <option value="3">Chocolate</option>
+          <option value="DDL">Dulce de leche</option>
+          <option value="Granizado">Granizado de chocolate</option>
+        </select>
+
+        <br />
+        <input type="checkbox" name="update" checked />Deseo recibir
+        actualizaciones
+        <br />
+        <button type="submit">Enviar datos</button>
+
+        <br />
+        <button type="reset" class="reset">Borrar</button>
+      </form>
+    </section>
+    <a href="http://bing.com" target="_new" class="bordeVerde colorNaranja"
+      >ir a Bing.com</a
+    >
+
+    <div>
+      <a href="algo.com.ar" class="colorNaranja">Otro hipervinculo</a>
+    </div>
+
+    <div class="p1">
+      <p class="p2">Parrafo 1</p>
+    </div>
+
+    <div>
+      <ul>
+        <li>Item 1</li>
+        <li><a href="">Item 2</a></li>
+        <li><span class="item">Item 3</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

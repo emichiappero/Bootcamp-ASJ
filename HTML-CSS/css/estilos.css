@@ -1,0 +1,66 @@
+#hipervinculo {
+  font-size: 18px;
+  color: red;
+}
+/*
+a {
+  border: 1px dashed green;
+  padding: 8px;
+}
+*/
+
+.bordeVerde {
+  border: 1px dotted greenyellow;
+}
+
+.colorNaranja {
+  color: rgb(167, 111, 8);
+}
+
+.big-text {
+  font-size: 100%;
+}
+
+/* .p2 {
+  color: blue;
+} */
+
+.p1 {
+  color: red;
+}
+
+#parrafo {
+  color: green;
+}
+
+/*  Selector universal
+* {
+  font-size: 30px;
+} 
+*/
+
+li a {
+  color: darkgreen;
+}
+
+li > .item {
+  font-size: 22px;
+}
+
+#reset {
+  background-color: red;
+}
+
+/*Pseudo Selector*/
+input:hover {
+  border: 1.5px solid red;
+}
+
+a:visited {
+  color: darkgoldenrod;
+}
+
+div {
+  margin: 10px 0 10px 5px;
+  border: 5px solid #a59b0d;
+}
