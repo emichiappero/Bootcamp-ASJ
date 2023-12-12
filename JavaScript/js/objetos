@@ -1,0 +1,52 @@
+//OBJETOS
+
+const persona = {
+  nombre: "Juan",
+  apellido: "Perez",
+  edad: 40,
+  ojosColor: "azul",
+};
+
+//Acceder a propiedades
+
+// objeto.propiedad
+// objeto["propiedad"]
+
+persona.nombre;
+persona["apellido"];
+
+//Métodos
+// const persona = {
+//   nombre: "Juan",
+//   apellido: "Perez",
+//   edad: 40,
+//   ojosColor: "azul",
+//   nombreCompleto: () => {
+//     return this.nombre + " " + this.apellido;
+//   },
+// };
+
+// persona.nombreCompleto();
+
+/* 
+En JavaScript, la palabra reservada "this" hace referencia a un objeto.
+Según cómo sea invocado (o donde) hara referencia a determinado objeto.
+
+Ejemplo:
+- En un método de un objeto, "this" se refiere al objeto
+  nombreCompleto: () => {
+    return this.nombre + " " + this.apellido; 
+  }
+
+- Sólo, "this" se refiere al objeto global
+  let x = this;
+
+- En una función, "this" se refiere al objeto global
+  function miFuncion() {
+    return this;
+  }
+
+- En un evento, "this" se refiere al elemento que recibe dicho evento
+  <button onclick="this.style.display='none'"> Eliminar </button>
+ 
+*/
