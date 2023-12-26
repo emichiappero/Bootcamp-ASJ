@@ -1,0 +1,5 @@
+<input #cityInput type="text" />
+<button (click)="update(cityInput.value); cityInput.value = ''">
+  Actualizar ciudad
+</button>
+<p>Ciudad: {{ city }}</p>

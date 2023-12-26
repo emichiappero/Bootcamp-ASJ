@@ -1,0 +1,37 @@
+<h2>{{ titulo }}</h2>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Comunicación Padre a Hijo</h4>
+    <p>{{ dato_enviado.num }}</p>
+    <p>{{ dato_enviado.word }}</p>
+  </div>
+  <div class="col-md-6">
+    <h4>Comunicación Hijo a Padre</h4>
+    <button (click)="emitirMensaje()">click me</button>
+  </div>
+</div>
+
+<button class="btn btn-success" (click)="generarAleatorio()">
+  Generar número aleatorio
+</button>
+
+<div>
+  <h3>{{ num }}</h3>
+  <span *ngIf="num > 5">
+    <h4>¡El número es mayor a 5!</h4>
+  </span>
+</div>
+
+<p>El valor de persona.edad es {{ persona.edad }}</p>
+
+<input
+  type="text"
+  placeholder="Insertar producto"
+  [(ngModel)]="producto"
+  (keyup.enter)="agregarProducto()"
+/>
+<p>Este es el listado de cosas a comprar</p>
+
+<ul>
+  <li *ngFor="let prod of compras">{{ prod }}</li>
+</ul>

@@ -1,0 +1,40 @@
+<h2>Jugando con Pipes</h2>
+
+<p>{{ nombre }}</p>
+<p>{{ nombre | uppercase }}</p>
+<p>{{ apellido | lowercase }}</p>
+<p>{{ total | currency : "EUR" }}</p>
+<p>{{ lorem | titlecase }}</p>
+<p>{{ fecha }}</p>
+<p>{{ fecha | date }}</p>
+<p>{{ fecha | date : "dd/MM/yyyy" }}</p>
+<p>{{ objeto | json }}</p>
+<p>{{ nombre | miPipe }}</p>
+<p>{{ "Hola esto es un texto " | miPipe }}</p>
+<p>{{ "hola" | miPipe : "aleman" }}</p>
+<p>{{ "hola" | miPipe : "italiano" }}</p>
+<p>{{ "hola" | miPipe : "rumano" }}</p>
+
+<p>{{ 18 | cuadrado }}</p>
+
+<input type="text" placeholder="Buscar" [(ngModel)]="search" />
+<br /><br />
+
+<div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let est of estudiantes | buscar : search">
+        <td>{{ est.nombre }}</td>
+        <td>{{ est.apellido }}</td>
+        <td>{{ est.estado }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

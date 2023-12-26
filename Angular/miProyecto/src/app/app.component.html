@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-12 p-3">
+    <button routerLink="contenido" class="btn btn-outline-dark">
+      Contenido
+    </button>
+    <button routerLink="ejemplo" class="btn btn-outline-dark">Ejemplo</button>
+    <button routerLink="servicios" class="btn btn-outline-dark">
+      Servicios
+    </button>
+  </div>
+</div>
+<div class="row">
+  <router-outlet>
+    <div class="col-md-12"></div>
+  </router-outlet>
+  <!-- <div class="col-md-6">
+      <app-lista></app-lista>
+    </div>
+    <div class="col-md-6">
+      <contenido
+        [dato_enviado]="{ num: 3, word: 'hola como estas' }"
+        (mensaje)="recibirMensaje($event)"
+      ></contenido>
+      <em>{{ msj }}</em>
+    </div> -->
+</div>

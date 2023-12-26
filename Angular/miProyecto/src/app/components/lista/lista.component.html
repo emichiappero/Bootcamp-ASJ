@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let color of colores; let i = index" (click)="alert()">
+    {{ color }} - {{ i }}
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="valor_input" (keyup.enter)="agregar()" />
+
+<h3 [ngClass]="numero > 10 ? 'text-success' : 'text-danger'">Colores</h3>
+
+{{ idURL }}

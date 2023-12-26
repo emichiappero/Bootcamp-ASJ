@@ -1,0 +1,13 @@
+.mi-componente {
+  color: blue;
+}
+
+h3 {
+  display: inline;
+  margin-right: 30px;
+}
+
+h4 {
+  display: inline;
+  color: red;
+}

@@ -1,0 +1,33 @@
+<div class="padre">
+  <h4>Nuestro Sitio web</h4>
+
+  <div>
+    <a routerLink="inicio">Inicio</a> | <a routerLink="hijo">Hijo</a> |
+    <a routerLinkActive="active" routerLink="contactenos/{}">Contacto</a>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <!--Si envio un texto, no hace falta [], si envio variable/objeto/array si debo usar []-->
+  <!-- <app-hijo
+    [datoEnviado]="{ nombre: 'Lucas', motivoExp: 'Comunicación Padre-Hijo' }"
+    otro="Holaaaa"
+  ></app-hijo>
+
+  <app-hijo (mensaje)="recibirMsj($event)"></app-hijo>
+
+  <p>Mensaje del Hijo: {{ msjContenido }}</p> -->
+
+  <!-- <hr />
+  <div>
+    <h3>Data Binding</h3>
+    <input type="text" #myInput />
+    <button (click)="mostrar(myInput.value)">Mostrar</button>
+    <h4>{{ myInput.value }}</h4>
+  </div>
+  <div>
+    <h3>Double Data Binding</h3>
+    <input type="text" [(ngModel)]="dato" />
+    <h4>{{ dato }}</h4>
+  </div> -->
+</div>

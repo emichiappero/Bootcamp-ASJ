@@ -1,0 +1,47 @@
+<h3>Listado de Usuarios</h3>
+{{ usuarios.data | json }}
+<table border="1">
+  <tr *ngFor="let u of usuarios">
+    <td>
+      <img src="{{ u.avatar }}" alt="{{ u.first_name }}" />
+    </td>
+    <td>{{ u.first_name }}</td>
+    <td>{{ u.last_name }}</td>
+    <td>{{ u.email }}</td>
+    <td><button (click)="modificar(u)">[Modificar]</button></td>
+    <td><button (click)="delete(u.id)">[Elimimar]</button></td>
+  </tr>
+</table>
+
+<hr />
+
+<h3>Nuevo Usuario</h3>
+<form #miForm="ngForm" (ngSubmit)="create(miForm)">
+  <input type="hidden" name="id" [(ngModel)]="userServicio.datosUsuarios.id" />
+  <input
+    type="text"
+    placeholder="Nombre"
+    name="name"
+    [(ngModel)]="userServicio.datosUsuarios.name"
+    required
+    minlength="4"
+    #name="ngModel"
+  />
+  <div *ngIf="name.errors?.['required']">Dato obligatorio</div>
+  <div *ngIf="name.errors?.['minlength']">
+    Debe tener al menos 4 caracteres.
+  </div>
+  <br />
+  <input
+    type="text"
+    placeholder="Trabajo"
+    name="job"
+    [(ngModel)]="userServicio.datosUsuarios.job"
+    required
+    #job="ngModel"
+  />
+  <br />
+  <br />
+  <button type="submit" [disabled]="!miForm.valid">Guardar</button>
+  <button type="reset" (click)="clearForm(miForm)">Limpiar</button>
+</form>
